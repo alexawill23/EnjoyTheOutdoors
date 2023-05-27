@@ -4,7 +4,16 @@ const locationRadio = document.getElementById("locationRadio");
 const parkRadio = document.getElementById("parkRadio");
 const stateDropdown = document.getElementById("stateDropdown");
 const parkDropdown = document.getElementById("parkDropdown");
-window.onload = function () {
+// variables for card on state dropdown 
+const nationalParkLocationName = document.getElementById("nationalParkLocationName"); 
+const nationalParkDetails = document.getElementById("nationalParkDetails"); 
+const nationalParkAddress = document.getElementById("nationalParkAddress"); 
+const nationalParkState = document.getElementById("nationalParkState"); 
+const nationalParkZipCode = document.getElementById("nationalParkZipCode"); 
+const nationalParkPhone = document.getElementById("nationalParkPhone"); 
+const nationalParkFax = document.getElementById("nationalParkFax"); 
+
+  window.onload = function () {
   // Radio button wire up
   console.log("window loaded");
   locationRadio.onchange = onLocationRadioChange; 
