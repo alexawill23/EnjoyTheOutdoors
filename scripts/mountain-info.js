@@ -1,37 +1,45 @@
-"use strict"; 
+"use strict";
 
-console.log("Start of Mountain Info Page... "); 
+console.log("Start of Mountain Info Page...");
 
-const mountainBtn = document.getElementById("mountainBtn"); 
-const mountainDropdown = document.getElementById("mountainDropdown"); 
+const mountainDropdown = document.getElementById("mountainDropdown");
+const mountainDetailsRow = document.getElementById("mountainDetailsRow");
 
-
-
-//Page Loading 
+// Page Loading
 window.onload = function () {
-}; 
+  populateMountainDropdown();
+};
 
-function onMountainDropdown () { 
-    mountainDropdown.innerHTML = ''; 
+function populateMountainDropdown() {
+  mountainDropdown.innerHTML = '';
 
-    if (mountainDropdown.selected){
-        for(mountain of mountainsArray) {
-            let newOption = new Option(mountain); 
-            mountainDropdown.appendChild(newOption);
-        }
-    function onMountainDropdown (){
-        const selectedMountain = mountainDropdown.ariaValueMax; 
-        displayMountainInfo(selectedMountain); 
-
-    }; 
-
-    function displayMountainInfo(mountainName) { 
-        const selectedMountain = mountainsArray.find(
-            mountain => mountainsArray.name == mountainName); 
-
-        if (selectedMountain) { 
-
-        } 
-    }
+  for (let mountain of mountainsArray) {
+    let newOption = new Option(mountain.name);
+    mountainDropdown.appendChild(newOption);
+  }
 }
+
+mountainDropdown.onchange = function () {
+  const selectedMountain = mountainDropdown.value;
+  displayMountainInfo(selectedMountain);
+};
+
+function displayMountainInfo(mountainName) {
+  const selectedMountain = mountainsArray.find(mountain => mountain.name === mountainName);
+
+  if (selectedMountain) {
+    // Display the mountain information
+    mountainDetailsRow.innerHTML = `
+      <h3>${selectedMountain.name}</h3>
+      <img src="${selectedMountain.image}" alt="${selectedMountain.name}">
+      <p>Description: ${selectedMountain.desc}</p>
+      <p>Elevation: ${selectedMountain.elevation}</p>
+      <p>Effort: ${selectedMountain.effort}</p>
+    `;
+  } else {
+    mountainDetailsRow.innerHTML = '';
+  }
 }
+
+
+    

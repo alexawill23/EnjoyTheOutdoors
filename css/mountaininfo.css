@@ -1,0 +1,10 @@
+body { 
+    font-family: 'Pangolin', cursive;
+    background-image: url("images\Field-StoryImage.jpg");
+    background: linear-gradient(rgb(46, 83, 177), rgba(58, 54, 118, 0.682), rgb(96, 80, 121)); 
+    
+}
+
+h1{
+    font-family: 'Pangolin', cursive;
+}; 

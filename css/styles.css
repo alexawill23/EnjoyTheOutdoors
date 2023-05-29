@@ -1,6 +1,8 @@
 body { 
-    background-color: rgb(102, 102, 164);
+    background-image: url("images\Eisenhower-StoryImage_2.jpg"); 
     font-family: 'Pangolin', cursive;
+    background:-moz-repeating-radial-gradient(brown, red);  
+    
     
 }
 
