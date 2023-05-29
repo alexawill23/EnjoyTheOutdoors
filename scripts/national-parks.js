@@ -4,17 +4,8 @@ const locationRadio = document.getElementById("locationRadio");
 const parkRadio = document.getElementById("parkRadio");
 const stateDropdown = document.getElementById("stateDropdown");
 const parkDropdown = document.getElementById("parkDropdown");
-// variables for card on state dropdown 
+// variables for card  information
  const stateDetailsRow = document.getElementById("stateDetailsRow"); 
-// const nationalParkLocationName = document.getElementById("nationalParkLocationName"); 
-// const nationalParkId = document.getElementById("nationalParkId"); 
-// const nationalParkDetails = document.getElementById("nationalParkDetails"); 
-// const nationalParkAddress = document.getElementById("nationalParkAddress"); 
-// const nationalParkCity = document.getElementById("nationalParkCity"); 
-// const nationalParkState = document.getElementById("nationalParkState"); 
-// const nationalParkZipCode = document.getElementById("nationalParkZipCode"); 
-// const nationalParkPhone = document.getElementById("nationalParkPhone"); 
-// const nationalParkFax = document.getElementById("nationalParkFax"); 
 const parkDetailsRow = document.getElementById("parkDetailsRow"); 
 
   window.onload = function () {
@@ -82,20 +73,17 @@ function onStateDropdownChange() {
     }
   }
 }
-
-//Park Dropdown Selection Change 
+// Park Dropdown Selection Change 
 function onParkDropdownChange() { 
   let selectedParkType = parkDropdown.value; 
+  const selectedParks = nationalParksArray.filter(park => park.LocationName.includes(selectedParkType)); 
   if (selectedParkType === ""){ 
     hideParkDetails();
   } else { 
-    let selectedParks = nationalParksArray.filter(park => park.LocationName == selectedParkType); 
-
     stateDetailsRow.innerHTML = ""; 
     parkDetailsRow.innerHTML = ""; //clears out previous card data
-    console.log(nationalParksArray); 
 
-    if (selectedParks && selectedParks.length> 0 ){
+    if (selectedParks.length > 0) {
       for(let park of selectedParks) { 
         let card = createParkCard(park); 
         parkDetailsRow.appendChild(card); 
@@ -105,8 +93,8 @@ function onParkDropdownChange() {
       hideParkDetails(); 
     }
   }
-
 }
+
   
     
       
@@ -191,6 +179,11 @@ stateDetailsRow.style.display = 'block';
 // Hide the state dropdown here
 stateDropdown.style.display = 'none';
    } 
+
+   function showParkDetails() {
+    //Show park detail elements here 
+    parkDetailsRow.style.display = 'block'; 
+   }
     
    function hideParkDetails() {
 // Hide the park detail elements here
@@ -203,49 +196,4 @@ parkDropdown.style.display = 'none';
     }
 
   
-    //const filterParks = nationalParksArray.filter(park => park.LocationName === selectedLocation);
-  //   displayFilterParks(filterParks);
-  // };
-  // function displayFilterParks(parks) {
-  //   for (let park of nationalParksArray) {
-  //       park == nationalParksArray.state;
-  //       console.log(filterParks);
-  //   };
-  // };  
-
-
-
-// function onLocationRadioChange(){
-//     let currentLocation = locationsArray.value
-//     if(currentLocation == ""){
-//         hideParkDropdown();
-//     } else {
-//         hideLocationDropdown();
-//     }
-// }
-// populateLocationDropdown(locationsArray);
-//};
-// function controlRadioClick(){
-//     if (locationRadio.changed){
-//         locationsArray.style.display = 'block';
-//     } else if (parkRadio.changed){
-//         locationsArray.style.display = 'none';
-//     };
-// }
-// onParkRadioChange ()
-//     let currentPark = parkTypesArray.value
-// locationRadio.addEventListener('click', controlRadioClick);
-// parkRadio.addEventListener('click', controlRadioClick);
-// function shuffleStates(){
-// for (let state of nationalParksArray ){
-//     state == nationalParksArray.state;
-// }
-// };
-// //when Park Type Radio is Clicked
-// function parkRadioClicked (){
-// }
-// function shuffleParks(){
-// }
-
-
-
+   
