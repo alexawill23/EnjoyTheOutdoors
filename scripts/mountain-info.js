@@ -33,7 +33,7 @@ function displayMountainInfo(mountainName) {
     mountainDetailsRow.innerHTML = `
     <div class="card">
       <h3>${selectedMountain.name}</h3>
-      <img class="card-image" img src="images" alt="${selectedMountain.name}">
+      <img class="card-image" img src="images/${selectedMountain.images}alt="${selectedMountain.name}">
       <div class="card-content">
       <p>Description: ${selectedMountain.desc}</p>
       <p>Elevation: ${selectedMountain.elevation}</p>

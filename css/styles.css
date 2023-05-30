@@ -1,12 +1,27 @@
 body { 
     font-family: 'Pangolin', cursive;  
-    background: linear-gradient(rgb(161, 83, 83), rgba(118, 66, 20, 0.682), #ccd059); 
-    background-repeat: none;
-    
-    
-    
+   background: linear-gradient(rgb(161, 83, 83), rgba(118, 66, 20, 0.682), #ccd059); 
+    background-repeat: no-repeat;
+    animation: gradientAnimation 10s linear infinite;
 }
+
+@keyframes gradientAnimation {
+  0% {
+    background-position: 0% 50%;
+  }
+  100% {
+    background-position: 100% 50%;
+  }
+}
+
+    
+    
+
 
 h1{
     font-family: 'Pangolin', cursive;
+}
+
+p {
+    font-size: 20px; 
 }
