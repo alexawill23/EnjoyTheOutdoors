@@ -1,5 +1,5 @@
 body { 
-    background: linear-gradient(rgb(57, 31, 31), rgba(118, 66, 20, 0.682), rgb(75, 94, 75)); 
+    background: linear-gradient(rgb(76, 41, 41), rgba(118, 66, 20, 0.682), rgb(75, 94, 75)); 
     font-family: 'Pangolin', cursive;
     
 }
@@ -7,3 +7,4 @@ body {
 h1{
     font-family: 'Pangolin', cursive;
 }; 
+

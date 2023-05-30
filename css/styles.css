@@ -1,6 +1,6 @@
 body { 
     font-family: 'Pangolin', cursive;  
-   background: linear-gradient(rgb(161, 83, 83), rgba(118, 66, 20, 0.682), #ccd059); 
+   background: linear-gradient(rgb(161, 56, 56), rgba(86, 73, 61, 0.682), #533313); 
     background-repeat: no-repeat;
     animation: gradientAnimation 10s linear infinite;
 }
