@@ -1,6 +1,8 @@
 body { 
     font-family: 'Pangolin', cursive;  
-    background-image: url('images\Cabot-StoryImg.jpg');
+    background: linear-gradient(rgb(161, 83, 83), rgba(118, 66, 20, 0.682), #ccd059); 
+    background-repeat: none;
+    
     
     
 }

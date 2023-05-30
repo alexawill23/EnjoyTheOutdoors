@@ -9,13 +9,13 @@ const mountainDetailsRow = document.getElementById("mountainDetailsRow");
 window.onload = function () {
   populateMountainDropdown();
 };
-
+//Inputting mountainData array information inside of dropdown 
 function populateMountainDropdown() {
   mountainDropdown.innerHTML = '';
   console.log("populating the mountain dropdown..."); 
 
-  for (let mountain of mountainsArray) {
-    let newOption = new Option(mountain.name);
+  for (let mountain of mountainsArray) { 
+    let newOption = new Option(mountain.name); //only allows the name to appear and not rest of information 
     mountainDropdown.appendChild(newOption);
   }
 }
@@ -29,7 +29,7 @@ function displayMountainInfo(mountainName) {
   const selectedMountain = mountainsArray.find(mountain => mountain.name === mountainName);
 
   if (selectedMountain) {
-    // Display the mountain information
+    // Displays the mountain information (easier way than in national-parks.js)
     mountainDetailsRow.innerHTML = `
     <div class="card">
       <h3>${selectedMountain.name}</h3>

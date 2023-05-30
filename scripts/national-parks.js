@@ -1,5 +1,6 @@
 "use strict";
 console.log("Start of loading page...");
+//variables for radio and dropdown 
 const locationRadio = document.getElementById("locationRadio");
 const parkRadio = document.getElementById("parkRadio");
 const stateDropdown = document.getElementById("stateDropdown");
@@ -160,18 +161,15 @@ function createParkCard(park) {
 }
 
 
-  
-
-
-
-
 
 function hideStateDetails() {
+  //Hide the state detail elements here 
   stateDetailsRow.style.display = 'none';
 
 }
 
 function showStateDetails () {
+  //Show state detail elements here 
 stateDetailsRow.style.display = 'block'; 
 }
    
